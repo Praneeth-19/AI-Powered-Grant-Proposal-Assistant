@@ -1,80 +1,59 @@
 # AI-Powered Grant Proposal Assistant
 
-## Project Overview
-
-This AI-Powered Grant Proposal Assistant is a Streamlit-based application designed to help researchers, academics, and non-profit organizations streamline the grant proposal writing process. It leverages various AI agents to assist with outlining, budget estimation, and even simulating reviewer feedback, making the proposal development more efficient and effective.
+## Overview
+A Streamlit-based application that helps researchers and organizations create grant proposals using AI assistance. The application provides intelligent tools for outline generation, budget estimation (in USD and INR), and simulated reviewer feedback.
 
 ## Features
-
-- **Input Details**: Easily input and manage core project information such as topic, goals, and target funding agency.
-- **Outline Designer**: Generate a structured proposal outline based on your project details, providing a solid starting point for your writing.
-- **Budget Estimator**: Get an estimated budget breakdown for your project, with support for both USD and INR currencies.
-- **Reviewer Simulation**: Receive simulated feedback from an AI reviewer, highlighting potential strengths, weaknesses, and suggestions for improvement before submission.
-- **Version Tracking**: (Removed as per user request)
+- **Project Details Input**: Enter your project topic, goals, and target funding agency
+- **Outline Designer**: AI-powered outline generation based on your project details
+- **Budget Estimator**: 
+  - Generate detailed budget estimates
+  - Support for both USD and INR currencies
+  - Customizable project duration and team size
+- **Reviewer Simulation**: Get AI-simulated feedback on your proposal
 
 ## Installation
 
-To set up the project locally, follow these steps:
+1. Install required dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-1.  **Clone the repository (if applicable):**
-    ```bash
-    git clone <repository_url>
-    cd AI-Powered-Grant-Proposal-Assistant
-    ```
-
-2.  **Create a virtual environment (recommended):**
-    ```bash
-    python -m venv venv
-    # On Windows
-    .\venv\Scripts\activate
-    # On macOS/Linux
-    source venv/bin/activate
-    ```
-
-3.  **Install the required dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-## Usage
-
-To run the Streamlit application, execute the following command in your terminal from the project's root directory:
-
+2. Run the application:
 ```bash
 streamlit run app.py
 ```
 
-The application will open in your default web browser at `http://localhost:8501`.
+The application will be available at `http://localhost:8501`
 
 ## Project Structure
 AI-Powered Grant Proposal Assistant/
 ├── agents/
-│   ├── init .py
-│   ├── budget_estimator.py
-│   ├── outline_designer.py
-│   └── reviewer.py
+│   ├── budget_estimator.py   # Budget estimation logic
+│   ├── outline_designer.py   # Outline generation
+│   └── reviewer.py          # Reviewer simulation
 ├── utils/
-│   ├── init .py
-│   └── memory.py
-├── app.py
-├── requirements.txt
-└── README.md
+│   └── memory.py           # Data persistence
+├── app.py                  # Main Streamlit application
+└── requirements.txt        # Python dependencies
 
 
--   `app.py`: The main Streamlit application file, handling UI and orchestrating agent interactions.
--   `agents/`: Contains individual AI agent modules.
-    -   `outline_designer.py`: Generates proposal outlines.
-    -   `budget_estimator.py`: Estimates project budgets.
-    -   `reviewer.py`: Simulates reviewer feedback.
--   `utils/`: Contains utility functions and classes.
-    -   `memory.py`: Handles version tracking and proposal memory (though version history is removed from UI).
--   `requirements.txt`: Lists all Python dependencies required to run the application.
--   `README.md`: This file, providing an overview of the project.
+## How to Use
 
-## Contributing
+1. **Input Project Details**
+   - Enter your project topic
+   - Define project goals
+   - Specify target funding agency
 
-Contributions are welcome! Please feel free to submit issues or pull requests.
+2. **Generate Outline**
+   - Click "Generate Outline" to create a structured proposal outline
+   - Edit the generated outline as needed
 
-## License
+3. **Estimate Budget**
+   - Enter project duration and team size
+   - Get budget estimates in both USD and INR
+   - Download budget details as CSV
 
-This project is open-source and available under the MIT License.
+4. **Get Reviewer Feedback**
+   - Submit your proposal for AI review
+   - Receive feedback on strengths and potential improvements
